@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIKERENJE — Nevidljivi nosači za tablice</title>
+<meta name="description" content="Nevidljivi nosači za registarske tablice. Bez rama, bez bušenja. Plaćanje pouzećem, dostava širom Srbije.">
+<meta name="theme-color" content="#0f0e0d">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0f0e0d;color:#f4f2ef;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#f4f2ef;text-decoration:none}
+a:hover{color:#e5332a}
+input,textarea,button{font-family:inherit}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#0f0e0d;overflow-x:clip">
+
+<sc-if value="{{ showTopBar }}" hint-placeholder-val="{{ true }}">
+<div style="background:#e5332a;color:#fff;text-align:center;padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Plaćanje pouzećem · Dostava širom Srbije za 1–3 radna dana</div>
+</sc-if>
+
+<header style="position:sticky;top:0;z-index:10;background:rgba(15,14,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid #26231f">
+<div style="max-width:1200px;margin:0 auto;padding:14px clamp(16px,4vw,24px);display:flex;align-items:center;justify-content:space-between;gap:12px">
+<a href="#top" style="font-family:'Anton',sans-serif;font-size:clamp(20px,5.5vw,26px);letter-spacing:.04em;text-transform:uppercase;display:flex;align-items:center;gap:6px"><img src="assets/logo.png" alt="Mikerenje logo" style="width:clamp(40px,11vw,52px);height:clamp(40px,11vw,52px);object-fit:contain;mix-blend-mode:lighten;margin:-6px 0"><span style="font-style:italic">MIKERENJE</span></a>
+<nav style="display:flex;align-items:center;gap:28px;font-size:14px;font-weight:500;flex-wrap:wrap">
+<sc-if value="{{ showNavLinks }}" hint-placeholder-val="{{ true }}">
+<a href="#kako">Kako radi</a>
+<a href="#cene">Cene</a>
+<a href="#pitanja">Pitanja</a>
+</sc-if>
+<a href="#poruci" style="background:#f4f2ef;color:#0f0e0d;padding:10px 18px;font-weight:700;transition:background .2s,color .2s" style-hover="background:#e5332a;color:#fff">Poruči</a>
+</nav>
+</div>
+</header>
+
+<section id="top" style="max-width:1200px;margin:0 auto;padding:clamp(40px,8vw,72px) clamp(16px,4vw,24px) clamp(56px,9vw,88px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,6vw,56px);align-items:center">
+<div data-hero="1" style="display:flex;flex-direction:column;gap:clamp(20px,4vw,28px)">
+<div style="display:inline-flex;align-self:flex-start;background:#e5332a;color:#fff;padding:8px 14px;transform:rotate(-2deg);font-family:'Anton',sans-serif;font-size:18px;letter-spacing:.04em;text-transform:uppercase">Nevidljivi, a nezamenjivi!</div>
+<h1 style="margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(44px,7vw,92px);line-height:.95;text-transform:uppercase;letter-spacing:-.005em;text-wrap:balance">Tablica bez okvira. <span style="color:#e5332a">Bez bušenja.</span></h1>
+<p style="margin:0;font-size:clamp(17px,2.4vw,19px);line-height:1.55;color:#bdb7ae;max-width:500px;text-wrap:pretty">Nevidljivi nosači drže tablicu čvrsto uz branik — bez plastičnog rama, bez šrafova i bez reklama prodavca automobila. Auto izgleda čistije, tablica kao da lebdi.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+<a data-pulse="1" href="#poruci" style="background:#e5332a;color:#fff;padding:18px 30px;flex:1 1 auto;text-align:center;transition:background .2s;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.04em" style-hover="background:#ff4136;color:#fff">Poruči odmah →</a>
+<a href="#kako" style="border:1px solid #3a3631;padding:17px 26px;flex:1 1 auto;text-align:center;transition:border-color .2s;font-weight:600;font-size:16px" style-hover="border-color:#f4f2ef;color:#f4f2ef">Kako se montira</a>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px 24px;padding-top:8px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8d867c">
+<span>✓ Pouzećem</span><span>✓ Montaža za 5 min</span><span>✓ Za sve vrste branika</span>
+</div>
+</div>
+<div data-heroimg="1" style="position:relative">
+<div data-float="1" style="position:absolute;inset:24px -12px -12px 24px;background:#e5332a;transform:rotate(2deg)"></div>
+<div style="position:relative;width:100%;aspect-ratio:4/5;border:1px solid #26231f;background:#181614">
+<img src="assets/hero.png" alt="Nevidljivi nosači za tablice" style="display:block;width:100%;height:100%;object-fit:cover">
+</div>
+</div>
+</section>
+
+
+<section style="background:#f4f2ef;color:#0f0e0d">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(64px,10vw,88px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:48px">
+<h2 data-reveal="1" style="margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(36px,5vw,60px);line-height:1;text-transform:uppercase;max-width:760px;text-wrap:balance">Ram za tablicu je višak. Vreme je da ga skineš.</h2>
+<div data-stagger="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:2px;background:#0f0e0d;border:2px solid #0f0e0d">
+<sc-for list="{{ benefits }}" as="b" hint-placeholder-count="4">
+<div style="background:#f4f2ef;padding:32px 28px;display:flex;flex-direction:column;gap:14px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#e5332a;letter-spacing:.08em">{{ b.n }}</span>
+<h3 style="margin:0;font-size:22px;font-weight:700;line-height:1.2">{{ b.t }}</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:#4a453f">{{ b.d }}</p>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="kako" style="max-width:1200px;margin:0 auto;padding:clamp(64px,10vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<h2 data-reveal="1" style="margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(36px,5vw,60px);line-height:1;text-transform:uppercase">Montaža u 3 koraka</h2>
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8d867c">Bez alata · Bez majstora</span>
+</div>
+<div data-stagger="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px">
+<sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="aspect-ratio:4/3;border:1px solid #2c2925;background:repeating-linear-gradient(135deg,#181614 0 10px,#1d1b18 10px 20px);display:flex;align-items:center;justify-content:center;padding:16px;text-align:center">
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#7a736a">{{ s.ph }}</span>
+</div>
+<div style="display:flex;gap:16px;align-items:baseline">
+<span style="font-family:'Anton',sans-serif;font-size:44px;line-height:1;color:#e5332a">{{ s.n }}</span>
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:20px;font-weight:700">{{ s.t }}</h3>
+<p style="margin:0;font-size:15px;line-height:1.55;color:#a39c92">{{ s.d }}</p>
+</div>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section style="border-top:1px solid #26231f;border-bottom:1px solid #26231f;overflow:hidden">
+<div data-stagger="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">
+<div style="position:relative;aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#181614 0 10px,#1d1b18 10px 20px);display:flex;align-items:center;justify-content:center;border-right:1px solid #26231f">
+<span style="position:absolute;top:20px;left:20px;background:#2c2925;color:#bdb7ae;padding:6px 12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Pre</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#7a736a">foto: tablica sa plastičnim ramom</span>
+</div>
+<div style="position:relative;aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#1c1513 0 10px,#231916 10px 20px);display:flex;align-items:center;justify-content:center">
+<span style="position:absolute;top:20px;left:20px;background:#e5332a;color:#fff;padding:6px 12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Posle</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#7a736a">foto: ista tablica na nevidljivim nosačima</span>
+</div>
+</div>
+</section>
+
+<section id="cene" style="max-width:1200px;margin:0 auto;padding:clamp(64px,10vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:640px">
+<h2 data-reveal="1" style="margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(36px,5vw,60px);line-height:1;text-transform:uppercase">Izaberi paket</h2>
+<p style="margin:0;font-size:17px;line-height:1.55;color:#a39c92">Jedan set je za jednu tablicu. Za prednju i zadnju uzmi komplet.</p>
+</div>
+<div data-stagger="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+<sc-for list="{{ packages }}" as="p" hint-placeholder-count="3">
+<button onClick="{{ p.select }}" style="text-align:left;cursor:pointer;color:inherit;padding:32px 28px;display:flex;flex-direction:column;gap:20px;position:relative;border:2px solid {{ p.border }};background:{{ p.bg }};transition:transform .25s ease,border-color .2s,background .2s" style-hover="border-color:#e5332a;transform:translateY(-6px)">
+<sc-if value="{{ p.badge }}" hint-placeholder-val="{{ false }}">
+<span style="position:absolute;top:-14px;left:24px;background:#e5332a;color:#fff;padding:5px 12px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase">{{ p.badge }}</span>
+</sc-if>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+<span style="font-size:20px;font-weight:700">{{ p.name }}</span>
+<span style="width:22px;height:22px;border-radius:50%;border:2px solid {{ p.border }};display:flex;align-items:center;justify-content:center"><span style="width:10px;height:10px;border-radius:50%;background:{{ p.dot }}"></span></span>
+</div>
+<span style="font-size:15px;color:#a39c92;line-height:1.5">{{ p.desc }}</span>
+<div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+<span style="font-family:'Anton',sans-serif;font-size:48px;line-height:1">{{ p.priceLabel }}</span>
+<span style="font-size:15px;color:#7a736a;text-decoration:line-through">{{ p.oldLabel }}</span>
+</div>
+</button>
+</sc-for>
+</div>
+</section>
+
+<section id="poruci" style="background:#f4f2ef;color:#0f0e0d">
+<div style="max-width:1200px;margin:0 auto;padding:clamp(64px,10vw,96px) clamp(16px,4vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,56px);align-items:start">
+<div style="display:flex;flex-direction:column;gap:24px">
+<h2 data-reveal="1" style="margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(40px,5.5vw,68px);line-height:.98;text-transform:uppercase">Poruči.<br>Plati kad stigne.</h2>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#4a453f;max-width:440px">Popuni formu, javićemo ti se telefonom da potvrdimo porudžbinu. Paket šaljemo kurirskom službom, plaćaš pouzećem.</p>
+<div style="display:flex;flex-direction:column;gap:2px;background:#0f0e0d;border:2px solid #0f0e0d;max-width:440px">
+<div style="background:#f4f2ef;padding:18px 20px;display:flex;justify-content:space-between;gap:12px"><span style="color:#4a453f">Paket</span><strong>{{ selName }}</strong></div>
+<div style="background:#f4f2ef;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+<span style="color:#4a453f">Količina</span>
+<div style="display:flex;align-items:center;border:1px solid #0f0e0d">
+<button onClick="{{ dec }}" style="width:40px;height:40px;border:none;background:transparent;font-size:20px;cursor:pointer" style-hover="background:#e6e2dc">−</button>
+<span style="width:40px;text-align:center;font-weight:700">{{ qty }}</span>
+<button onClick="{{ inc }}" style="width:40px;height:40px;border:none;background:transparent;font-size:20px;cursor:pointer" style-hover="background:#e6e2dc">+</button>
+</div>
+</div>
+<div style="background:#f4f2ef;padding:18px 20px;display:flex;justify-content:space-between;gap:12px"><span style="color:#4a453f">Dostava</span><strong>{{ shipLabel }}</strong></div>
+<div style="background:#0f0e0d;color:#f4f2ef;padding:20px;display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="text-transform:uppercase;letter-spacing:.06em;font-size:14px">Ukupno</span><span style="font-family:'Anton',sans-serif;font-size:clamp(28px,7vw,36px);line-height:1">{{ totalLabel }}</span></div>
+</div>
+</div>
+
+<div data-reveal="1" style="background:#fff;border:2px solid #0f0e0d;padding:clamp(22px,5vw,36px) clamp(18px,5vw,32px);box-shadow:8px 8px 0 #e5332a">
+<sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:18px">
+<sc-for list="{{ fields }}" as="f" hint-placeholder-count="5">
+<label style="display:flex;flex-direction:column;gap:8px">
+<span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#4a453f">{{ f.label }}</span>
+<input name="{{ f.key }}" value="{{ f.value }}" onChange="{{ f.onChange }}" placeholder="{{ f.ph }}" type="{{ f.type }}" style="height:52px;padding:0 16px;font-size:16px;border:1.5px solid {{ f.border }};background:#faf9f7;outline:none;color:#0f0e0d" style-focus="border-color:#0f0e0d;background:#fff">
+</label>
+</sc-for>
+<sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+<span style="color:#c4241c;font-size:14px;font-weight:600">{{ error }}</span>
+</sc-if>
+<button type="submit" style="height:60px;background:#e5332a;color:#fff;border:none;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;margin-top:6px;transition:background .2s" style-hover="background:#0f0e0d">Poruči · {{ totalLabel }}</button>
+<span style="font-size:13px;color:#7a736a;text-align:center">Bez plaćanja unapred. Plaćaš kuriru pri preuzimanju.</span>
+</form>
+</sc-if>
+<sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:18px;padding:16px 0">
+<span style="width:56px;height:56px;background:#e5332a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700">✓</span>
+<h3 style="margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:40px;line-height:1;text-transform:uppercase">Hvala, {{ firstName }}!</h3>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#4a453f">Porudžbina je primljena. Zvaćemo te na <strong>{{ phone }}</strong> u toku dana da potvrdimo adresu i rok isporuke.</p>
+<button onClick="{{ reset }}" style="align-self:flex-start;background:transparent;border:1.5px solid #0f0e0d;padding:12px 20px;font-weight:600;cursor:pointer" style-hover="background:#0f0e0d;color:#fff">Nova porudžbina</button>
+</div>
+</sc-if>
+</div>
+</div>
+</section>
+
+<section id="pitanja" style="max-width:860px;margin:0 auto;padding:clamp(64px,10vw,96px) clamp(16px,4vw,24px);display:flex;flex-direction:column;gap:40px">
+<h2 data-reveal="1" style="margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(36px,5vw,60px);line-height:1;text-transform:uppercase">Česta pitanja</h2>
+<div data-stagger="1" style="display:flex;flex-direction:column;border-top:1px solid #2c2925">
+<sc-for list="{{ faq }}" as="q" hint-placeholder-count="5">
+<div style="border-bottom:1px solid #2c2925">
+<button onClick="{{ q.toggle }}" style="width:100%;background:transparent;border:none;color:#f4f2ef;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;text-align:left;font-size:18px;font-weight:600" style-hover="color:#e5332a">
+<span>{{ q.q }}</span><span style="font-family:'JetBrains Mono',monospace;font-size:22px;color:#e5332a;flex-shrink:0">{{ q.icon }}</span>
+</button>
+<sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
+<p style="margin:0;padding:0 40px 24px 0;font-size:16px;line-height:1.6;color:#a39c92">{{ q.a }}</p>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<footer style="border-top:1px solid #26231f">
+<div style="max-width:1200px;margin:0 auto;padding:40px clamp(16px,4vw,24px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;font-size:14px;color:#8d867c">
+<img src="assets/logo.png" alt="Mikerenje" style="width:140px;height:140px;object-fit:contain;mix-blend-mode:lighten;margin:-16px 0">
+<div style="display:flex;flex-wrap:wrap;gap:24px">
+<a href="tel:+381600000000" style="color:#8d867c">+381 60 000 0000</a>
+<a href="#" style="color:#8d867c">Instagram</a>
+<a href="#" style="color:#8d867c">TikTok</a>
+</div>
+<span>© 2026 MIKERENJE · Sva prava zadržana</span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showTopBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prikaz&quot;},&quot;priceSingle&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:990,&quot;tsType&quot;:&quot;number&quot;,&quot;unit&quot;:&quot;RSD&quot;,&quot;section&quot;:&quot;Cene&quot;},&quot;priceSet&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:1690,&quot;tsType&quot;:&quot;number&quot;,&quot;unit&quot;:&quot;RSD&quot;,&quot;section&quot;:&quot;Cene&quot;},&quot;priceDouble&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:2990,&quot;tsType&quot;:&quot;number&quot;,&quot;unit&quot;:&quot;RSD&quot;,&quot;section&quot;:&quot;Cene&quot;},&quot;shippingCost&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:390,&quot;tsType&quot;:&quot;number&quot;,&quot;unit&quot;:&quot;RSD&quot;,&quot;section&quot;:&quot;Dostava&quot;},&quot;freeShippingFrom&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:2500,&quot;tsType&quot;:&quot;number&quot;,&quot;unit&quot;:&quot;RSD&quot;,&quot;section&quot;:&quot;Dostava&quot;}}">class Component extends DCLogic {
+  state = { pkg: 1, qty: 1, form: { ime: '', telefon: '', adresa: '', grad: '', napomena: '' }, submitted: false, error: '', tried: false, openFaq: 0 };
+
+  componentDidMount() {
+    this.onResize = () => { const m = window.innerWidth < 720; if (m !== this.state.mobile) this.setState({ mobile: m }); };
+    this.onResize();
+    window.addEventListener('resize', this.onResize);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    const ease = 'cubic-bezier(.2,.7,.2,1)';
+    const rise = (el, delay) => el.animate([{ opacity: 0, translate: '0 28px' }, { opacity: 1, translate: '0 0' }], { duration: 750, delay, easing: ease, fill: 'backwards' });
+    const hero = document.querySelector('[data-hero]');
+    if (hero) [...hero.children].forEach((c, i) => rise(c, 100 + i * 110));
+    const img = document.querySelector('[data-heroimg]');
+    if (img) img.animate([{ opacity: 0, translate: '40px 0', scale: .96 }, { opacity: 1, translate: '0 0', scale: 1 }], { duration: 1000, delay: 250, easing: ease, fill: 'backwards' });
+    const fl = document.querySelector('[data-float]');
+    if (fl) fl.animate([{ translate: '0 0' }, { translate: '-8px 8px' }, { translate: '0 0' }], { duration: 5000, iterations: Infinity, easing: 'ease-in-out' });
+    const pulse = document.querySelector('[data-pulse]');
+    if (pulse) pulse.animate([{ boxShadow: '0 0 0 0 rgba(229,51,42,.55)' }, { boxShadow: '0 0 0 16px rgba(229,51,42,0)' }], { duration: 1800, iterations: Infinity, delay: 1500 });
+    const targets = [...document.querySelectorAll('[data-reveal],[data-stagger]')];
+    const hide = el => { if (el.dataset.stagger) [...el.children].forEach(c => c.style.opacity = '0'); else el.style.opacity = '0'; };
+    const show = el => {
+      if (el.dataset.stagger) [...el.children].forEach((c, i) => { c.style.opacity = ''; rise(c, i * 90); });
+      else { el.style.opacity = ''; rise(el, 0); }
+    };
+    targets.forEach(hide);
+    this.io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { show(e.target); this.io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach(t => this.io.observe(t));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    this.io && this.io.disconnect();
+  }
+
+  fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' RSD'; }
+
+  renderVals() {
+    const p = this.props;
+    const prices = [p.priceSingle ?? 990, p.priceSet ?? 1690, p.priceDouble ?? 2990];
+    const olds = [1490, 2490, 4490];
+    const freeFrom = p.freeShippingFrom ?? 2500;
+    const shipCost = p.shippingCost ?? 390;
+    const defs = [
+      { name: '1 set', desc: 'Za jednu tablicu — prednju ili zadnju.', badge: '' },
+      { name: 'Komplet', desc: 'Dva seta: prednja + zadnja tablica. Najčešći izbor.', badge: 'Najprodavanije' },
+      { name: '2 kompleta', desc: 'Za dva automobila ili poklon prijatelju.', badge: 'Najbolja cena' }
+    ];
+    const packages = defs.map((d, i) => {
+      const sel = this.state.pkg === i;
+      return { ...d, priceLabel: this.fmt(prices[i]), oldLabel: this.fmt(olds[i]),
+        border: sel ? '#e5332a' : '#2c2925', bg: sel ? '#1b1412' : '#151412', dot: sel ? '#e5332a' : 'transparent',
+        select: () => this.setState({ pkg: i }) };
+    });
+    const sub = prices[this.state.pkg] * this.state.qty;
+    const ship = sub >= freeFrom ? 0 : shipCost;
+    const meta = [
+      { key: 'ime', label: 'Ime i prezime', ph: 'Marko Marković', type: 'text', req: true },
+      { key: 'telefon', label: 'Telefon', ph: '06x xxx xxxx', type: 'tel', req: true },
+      { key: 'adresa', label: 'Ulica i broj', ph: 'Bulevar oslobođenja 12', type: 'text', req: true },
+      { key: 'grad', label: 'Grad i poštanski broj', ph: 'Novi Sad, 21000', type: 'text', req: true },
+      { key: 'napomena', label: 'Napomena (opciono)', ph: 'npr. zvati posle 16h', type: 'text', req: false }
+    ];
+    const fields = meta.map(m => ({ ...m, value: this.state.form[m.key],
+      border: this.state.tried && m.req && !this.state.form[m.key].trim() ? '#c4241c' : '#d6d1c9',
+      onChange: e => { const v = e.target.value; this.setState(s => ({ form: { ...s.form, [m.key]: v }, error: '' })); } }));
+    const faqData = [
+      ['Da li su legalni?', 'Da. Tablica ostaje potpuno vidljiva i čitljiva, nosači su sa zadnje strane i ne prekrivaju nijedan znak.'],
+      ['Da li se buši branik?', 'Ne. Nosači se lepe na branik, nije potreban nikakav alat ni bušenje.'],
+      ['Da li izdržavaju pranje i autoput?', 'Da. Lepak je otporan na vodu, mraz, vrućinu i pranje u perionici.'],
+      ['Odgovaraju li za moj auto?', 'Odgovaraju za ravne i blago zaobljene branike, kod većine putničkih vozila.'],
+      ['Kako se plaća i koliko traje dostava?', 'Plaćaš pouzećem kuriru. Isporuka traje 1–3 radna dana na teritoriji Srbije.']
+    ];
+    const faq = faqData.map(([q, a], i) => { const open = this.state.openFaq === i;
+      return { q, a, open, icon: open ? '−' : '+', toggle: () => this.setState({ openFaq: open ? -1 : i }) }; });
+
+    return {
+      showTopBar: p.showTopBar ?? true,
+      showNavLinks: !this.state.mobile,
+      benefits: [
+        { n: '01', t: 'Nema rama', d: 'Tablica stoji direktno uz branik. Bez plastike koja žuti, puca i zvecka.' },
+        { n: '02', t: 'Bez bušenja', d: 'Ne diraš branik. Nema rupa, nema rđe, nema štete na farbi.' },
+        { n: '03', t: 'Drži čvrsto', d: 'Ne pomera se na rupama, autoputu ni u perionici.' },
+        { n: '04', t: 'Skida se lako', d: 'Menjaš auto ili tablice? Nosači se skidaju bez tragova.' }
+      ],
+      steps: [
+        { n: '1', t: 'Očisti površinu', d: 'Obriši deo branika gde stoji tablica i pusti da se osuši.', ph: 'foto: brisanje branika' },
+        { n: '2', t: 'Zalepi nosače', d: 'Skini zaštitnu foliju i pritisni nosače na poleđinu tablice.', ph: 'foto: nosači na poleđini tablice' },
+        { n: '3', t: 'Prisloni tablicu', d: 'Postavi tablicu na branik i drži par sekundi. Gotovo.', ph: 'foto: tablica na autu, bez rama' }
+      ],
+      packages, fields, faq,
+      selName: defs[this.state.pkg].name,
+      qty: this.state.qty,
+      inc: () => this.setState(s => ({ qty: Math.min(10, s.qty + 1) })),
+      dec: () => this.setState(s => ({ qty: Math.max(1, s.qty - 1) })),
+      shipLabel: ship === 0 ? 'Besplatna' : this.fmt(ship),
+      totalLabel: this.fmt(sub + ship),
+      error: this.state.error,
+      notSubmitted: !this.state.submitted,
+      submitted: this.state.submitted,
+      firstName: this.state.form.ime.trim().split(' ')[0] || '',
+      phone: this.state.form.telefon,
+      submit: e => {
+        e.preventDefault();
+        const missing = meta.filter(m => m.req && !this.state.form[m.key].trim());
+        if (missing.length) return this.setState({ tried: true, error: 'Popuni sva obavezna polja.' });
+        if (this.state.form.telefon.replace(/\D/g, '').length < 8) return this.setState({ tried: true, error: 'Proveri broj telefona.' });
+        this.setState({ submitted: true, error: '' });
+      },
+      reset: () => this.setState({ submitted: false, tried: false, qty: 1, form: { ime: '', telefon: '', adresa: '', grad: '', napomena: '' } })
+    };
+  }
+}</script>
+</body>
+</html>
